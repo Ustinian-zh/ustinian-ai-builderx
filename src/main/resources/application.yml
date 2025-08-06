@@ -1,4 +1,10 @@
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ustinian-ai-builderx
+    username: root
+    password: 5201314WZH
+#上面的配置是数据库连接信息，本项目中还用于代码生成器的使用，已确认可用
   application:
     name: ustinian-ai-builderx-backend
 server:
@@ -7,12 +13,6 @@ server:
       context-path: /api
 # springdoc-openapi????
 springdoc:
-#  swagger-ui:
-#    path: /swagger-ui.html
-#    tags-sorter: alpha
-#    operations-sorter: alpha
-#  api-docs:
-#    path: /v3/api-docs
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
